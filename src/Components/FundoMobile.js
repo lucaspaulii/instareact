@@ -1,11 +1,16 @@
+const ionIcons = [
+    {name: "home"},
+    {name: "search-outline"},
+    {name: "add-circle-outline"},
+    {name: "heart-outline"},
+    {name: "person-outline"}
+];
+
 export default function FundoMobile() {
     return (
         <div>
-            <ion-icon name="home"></ion-icon>
-            <ion-icon name="search-outline"></ion-icon>
-            <ion-icon name="add-circle-outline"></ion-icon>
-            <ion-icon name="heart-outline"></ion-icon>
-            <ion-icon name="person-outline"></ion-icon> 
+            {ionIcons.map((a) => <ion-icon name={a.name}></ion-icon>)}
         </div>
     )
 }
+
