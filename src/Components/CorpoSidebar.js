@@ -1,8 +1,10 @@
+import SugestoesCorpoSidebar from "./SugestoesCorpoSidebar";
+
 export default function CorpoSidebar() {
   return (
     <div>
-      <Usuario /> {/* Falta fazer */}
-      <SugestoesCorpoSidebar /> {/* Falta fazer */}
+      <Usuario /> {/* FEITO */}
+      <SugestoesCorpoSidebar /> {/* FEITO*/}
       <Links /> {/* FEITO*/}
       <Copyright /> {/* FEITO */}
     </div>
@@ -36,5 +38,3 @@ function Usuario() {
     </div>
   );
 }
-
-
