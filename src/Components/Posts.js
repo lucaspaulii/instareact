@@ -1,8 +1,8 @@
 import Post from "./Post";
 export default function Posts() {
   const postContent = [
-    {userImg: "public/Assets/img/meowed.svg", userText: "meowed", conteudoImg: "public/Assets/img/gato-telefone.svg", curtidasImg: "public/Assets/img/respondeai.svg", curtidasTexto: "respondeai", curtidasQuantidade: 101523},
-    {userImg: "public/Assets/img/barked.svg", userText: "barked", conteudoImg: "public/Assets/img/dog.svg", curtidasImg: "public/Assets/img/adorable_animals.svg", curtidasTexto: "adorable_animals", curtidasQuantidade: 99159},
+    {userImg: "./Assets/img/meowed.svg", userText: "meowed", conteudoImg: "./Assets/img/gato-telefone.svg", curtidasImg: "./Assets/img/respondeai.svg", curtidasTexto: "respondeai", curtidasQuantidade: 101523},
+    {userImg: "./Assets/img/barked.svg", userText: "barked", conteudoImg: "./Assets/img/dog.svg", curtidasImg: "./Assets/img/adorable_animals.svg", curtidasTexto: "adorable_animals", curtidasQuantidade: 99159},
   ]
 
   return (

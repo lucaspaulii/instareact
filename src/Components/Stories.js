@@ -1,17 +1,26 @@
 export default function Stories() {
   const storiesContent = [
-    {img: "./public/Assets/img/meowed.svg", usuario: "meowed"},
-    {img: "./public/Assets/img/barked.svg", usuario: "barked"},
-    {img: "./public/Assets/img/nathanwpylestrangeplanet.svg", usuario: "nathanwpylestrangeplanet"},
-    {img: "./public/Assets/img/wawawicomics.svg", usuario: "wawawicomics"},
-    {img: "./public/Assets/img/respondeai.svg", usuario: "respondeai"},
-    {img: "./public/Assets/img/filomoderna.svg", usuario: "filomoderna"},
-    {img: "./public/Assets/img/memeriagourmet.svg", usuario: "memeriagourmet"}
-  ]
+    { img: "./Assets/img/meowed.svg", usuario: "meowed" },
+    { img: "./Assets/img/barked.svg", usuario: "barked" },
+    {
+      img: "./Assets/img/nathanwpylestrangeplanet.svg",
+      usuario: "nathanwpylestrangeplanet",
+    },
+    { img: "./Assets/img/wawawicomics.svg", usuario: "wawawicomics" },
+    { img: "./Assets/img/respondeai.svg", usuario: "respondeai" },
+    { img: "./Assets/img/filomoderna.svg", usuario: "filomoderna" },
+    { img: "./Assets/img/memeriagourmet.svg", usuario: "memeriagourmet" },
+    { img: "./Assets/img/wawawicomics.svg", usuario: "wawawicomics" },
+    { img: "./Assets/img/respondeai.svg", usuario: "respondeai" },
+    { img: "./Assets/img/filomoderna.svg", usuario: "filomoderna" },
+    { img: "./Assets/img/memeriagourmet.svg", usuario: "memeriagourmet" }
+  ];
   return (
     <div class="stories">
-      {storiesContent.map(s => <Story imagem={s.img} usuario={s.usuario}/>)}
-      <Setinha /> {/*FEITO*/}
+      {storiesContent.map((s) => (
+        <Story imagem={s.img} usuario={s.usuario} />
+      ))}
+      <Setinha />
     </div>
   );
 }
@@ -35,5 +44,3 @@ function Setinha() {
     </div>
   );
 }
-
-

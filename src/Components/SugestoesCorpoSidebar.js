@@ -1,32 +1,31 @@
-const sugestoes = [
-  {
-    imagem: "public/Assets/img/bad.vibes.memes.svg",
-    nome: "bad.vibe.memes",
-    razao: "Segue voce",
-  },
-  {
-    imagem: "public/Assets/img/chibirdart.svg",
-    nome: "chibidart",
-    razao: "Segue voce",
-  },
-  {
-    imagem: "public/Assets/img/razoesparaacreditar.svg",
-    nome: "razoesparaacreditar",
-    razao: "Novo no Instagram",
-  },
-  {
-    imagem: "public/Assets/img/adorable_animals.svg",
-    nome: "adorable_animals",
-    razao: "Segue voce",
-  },
-  {
-    imagem: "public/Assets/img/smallcutecats.svg",
-    nome: "smallcutecats",
-    razao: "Segue voce",
-  },
-];
-
 export default function SugestoesCorpoSidebar() {
+  const sugestoes = [
+    {
+      imagem: "./Assets/img/bad.vibes.memes.svg",
+      nome: "bad.vibe.memes",
+      razao: "Segue voce",
+    },
+    {
+      imagem: "./Assets/img/chibirdart.svg",
+      nome: "chibidart",
+      razao: "Segue voce",
+    },
+    {
+      imagem: "./Assets/img/razoesparaacreditar.svg",
+      nome: "razoesparaacreditar",
+      razao: "Novo no Instagram",
+    },
+    {
+      imagem: "./Assets/img/adorable_animals.svg",
+      nome: "adorable_animals",
+      razao: "Segue voce",
+    },
+    {
+      imagem: "./Assets/img/smallcutecats.svg",
+      nome: "smallcutecats",
+      razao: "Segue voce",
+    },
+  ];
   return (
     <div class="sugestoes">
       <Titulo />

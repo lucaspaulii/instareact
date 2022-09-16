@@ -1,12 +1,14 @@
 export default function Navbar() {
   return (
-    <div class="container">
-      <Logo />
-      <LogoMobile />
-      <InstagramMobile />
-      <Pesquisa />
-      <Icones />
-      <IconesMobile />
+    <div class="navbar">
+      <div class="container">
+        <Logo />
+        <LogoMobile />
+        <InstagramMobile />
+        <Pesquisa />
+        <Icones />
+        <IconesMobile />
+      </div>
     </div>
   );
 }
@@ -16,7 +18,7 @@ function Logo() {
     <div class="logo">
       <ion-icon name="logo-instagram"></ion-icon>
       <div class="separador"></div>
-      <img src="./public/Assets/img/logo.png" />
+      <img src="./Assets/img/logo.png" />
     </div>
   );
 }
@@ -32,7 +34,7 @@ function LogoMobile() {
 function InstagramMobile() {
   return (
     <div class="instagram-mobile">
-      <img src="./public/Assets/img/logo.png" />
+      <img src="./Assets/img/logo.png" />
     </div>
   );
 }

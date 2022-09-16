@@ -1,8 +1,7 @@
-import Posts from "./Posts";
 
 export default function Post(props) {
   return (
-    <div>
+    <div class="post">
       <TopoPost userImg={props.userImg} userText={props.userText} />
       <ConteudoPost conteudoImg={props.conteudoImg} />
       <FundoPost

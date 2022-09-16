@@ -1,10 +1,18 @@
 import SugestoesCorpoSidebar from "./SugestoesCorpoSidebar";
 
 export default function CorpoSidebar() {
-  const usuarioData = {nome: "Catana", img: "public/Assets/img/catanacomics.svg", user: "catanacomics"}
+  const usuarioData = {
+    nome: "Catana",
+    img: "./Assets/img/catanacomics.svg",
+    user: "catanacomics",
+  };
   return (
     <div class="sidebar">
-      <Usuario nome={usuarioData.nome} img={usuarioData.img} user={usuarioData.user}/>
+      <Usuario
+        nome={usuarioData.nome}
+        img={usuarioData.img}
+        user={usuarioData.user}
+      />
       <SugestoesCorpoSidebar />
       <Links />
       <Copyright />
