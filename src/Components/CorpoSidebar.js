@@ -1,12 +1,13 @@
 import SugestoesCorpoSidebar from "./SugestoesCorpoSidebar";
 
 export default function CorpoSidebar() {
+  const usuarioData = {nome: "Catana", img: "public/Assets/img/catanacomics.svg", user: "catanacomics"}
   return (
-    <div>
-      <Usuario /> {/* FEITO */}
-      <SugestoesCorpoSidebar /> {/* FEITO*/}
-      <Links /> {/* FEITO*/}
-      <Copyright /> {/* FEITO */}
+    <div class="sidebar">
+      <Usuario nome={usuarioData.nome} img={usuarioData.img} user={usuarioData.user}/>
+      <SugestoesCorpoSidebar />
+      <Links />
+      <Copyright />
     </div>
   );
 }
@@ -24,14 +25,14 @@ function Links() {
   );
 }
 
-function Usuario() {
+function Usuario(props) {
   return (
     <div class="usuario">
-      <img src="assets/img/catanacomics.svg" />
+      <img src={props.img} />
       <div class="texto">
-        <strong>catanacomics</strong>
+        <strong>{props.user}</strong>
         <span>
-          Catana
+          {props.nome}
           <ion-icon name="pencil"></ion-icon>
         </span>
       </div>

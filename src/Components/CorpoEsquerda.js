@@ -1,8 +1,11 @@
+import Stories from "./Stories";
+import Posts from "./Posts";
+
 export default function CorpoEsquerda() {
-    return (
-        <div>
-            <Stories /> {/*Falta fazer*/}
-            <Posts /> {/*Falta fazer*/}
-        </div>
-    )
+  return (
+    <div class="esquerda">
+      <Stories />
+      <Posts />
+    </div>
+  );
 }
