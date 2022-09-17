@@ -89,7 +89,7 @@ function Curtidas(props) {
       <img src={props.curtidasImg} />
       <div class="texto">
         Curtido por <strong>{props.curtidasTexto}</strong> e{" "}
-        <strong>outras {props.curtidasQuantidade} pessoas</strong>
+        <strong>outras {props.curtidasQuantidade.toLocaleString('de')} pessoas</strong>
       </div>
     </div>
   );
