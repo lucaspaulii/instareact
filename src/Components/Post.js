@@ -1,4 +1,4 @@
-
+import React from "react";
 export default function Post(props) {
   return (
     <div class="post">
@@ -49,6 +49,11 @@ function FundoPost(props) {
 }
 
 function Acoes() {
+  const [isClicked, setIsClicked] = React.useState(false)
+  function handleSave() {
+    let newClick = (isClicked ? false : true)
+    setIsClicked(newClick)
+  }
   return (
     <div class="acoes">
       <div>
@@ -57,7 +62,7 @@ function Acoes() {
         <ion-icon name="paper-plane-outline"></ion-icon>
       </div>
       <div>
-        <ion-icon name="bookmark-outline"></ion-icon>
+        <ion-icon name={isClicked ? "bookmark" : "bookmark-outline"} onClick={handleSave}></ion-icon>
       </div>
     </div>
   );
