@@ -1,17 +1,23 @@
 import SugestoesCorpoSidebar from "./SugestoesCorpoSidebar";
+import React from "react";
 
 export default function CorpoSidebar() {
+  const [nome, setNome] = React.useState('Catana') 
   const usuarioData = {
-    nome: "Catana",
     img: "./Assets/img/catanacomics.svg",
     user: "catanacomics",
   };
+  function changeName() {
+    const newName = prompt('Insira seu novo nome!')
+    setNome(newName)
+  }
   return (
     <div class="sidebar">
       <Usuario
-        nome={usuarioData.nome}
+        nome={nome}
         img={usuarioData.img}
         user={usuarioData.user}
+        handleClick={() => changeName()}
       />
       <SugestoesCorpoSidebar />
       <Links />
@@ -41,7 +47,7 @@ function Usuario(props) {
         <strong>{props.user}</strong>
         <span>
           {props.nome}
-          <ion-icon name="pencil"></ion-icon>
+          <ion-icon name="pencil" onClick={props.handleClick}></ion-icon>
         </span>
       </div>
     </div>
