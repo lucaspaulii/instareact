@@ -3,21 +3,26 @@ import React from "react";
 
 export default function CorpoSidebar() {
   const [nome, setNome] = React.useState('Catana') 
+  const [imagem, setImagem] = React.useState('./Assets/img/catanacomics.svg') 
   const usuarioData = {
-    img: "./Assets/img/catanacomics.svg",
     user: "catanacomics",
   };
   function changeName() {
     const newName = prompt('Insira seu novo nome!')
     setNome(newName)
   }
+  function changeImg() {
+    const newImg = prompt('Insira o link de sua nova foto de perfil!')
+    setImagem(newImg)
+  }
   return (
     <div class="sidebar">
       <Usuario
         nome={nome}
-        img={usuarioData.img}
+        img={imagem}
         user={usuarioData.user}
-        handleClick={() => changeName()}
+        handleClickName={() => changeName()}
+        handleClickImg = {() => changeImg()}
       />
       <SugestoesCorpoSidebar />
       <Links />
@@ -42,12 +47,12 @@ function Links() {
 function Usuario(props) {
   return (
     <div class="usuario">
-      <img src={props.img} />
+      <img src={props.img} onClick={props.handleClickImg}/>
       <div class="texto">
         <strong>{props.user}</strong>
         <span>
           {props.nome}
-          <ion-icon name="pencil" onClick={props.handleClick}></ion-icon>
+          <ion-icon name="pencil" onClick={props.handleClickName}></ion-icon>
         </span>
       </div>
     </div>
