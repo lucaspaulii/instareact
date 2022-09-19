@@ -7,12 +7,27 @@ export default function CorpoSidebar() {
   const usuarioData = {
     user: "catanacomics",
   };
+  function isValidUrl(urlInput) {
+    try {
+      return Boolean(new URL(urlInput));
+    } catch (e) {
+      return false;
+    }
+  };
   function changeName() {
-    const newName = prompt('Insira seu novo nome!')
+    let newName = prompt('Insira seu novo nome!');
+    while(!newName) {
+      alert('Voce nao inseriu corretamente!');
+      newName = prompt('Insira seu novo nome!');
+    }
     setNome(newName)
   }
   function changeImg() {
-    const newImg = prompt('Insira o link de sua nova foto de perfil!')
+    let newImg = prompt('Insira o link de sua nova foto de perfil!')
+    while(!isValidUrl(newImg)) {
+      alert('Sua imagem precisa ser uma URL valida!');
+      newImg = prompt('Insira o link de sua nova foto de perfil!');
+    }
     setImagem(newImg)
   }
   return (
